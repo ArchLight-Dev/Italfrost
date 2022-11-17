@@ -1,7 +1,10 @@
 import React from 'react';
+import FrontPage from "./Components/FrontPage";
 
 function App() {
-  return null
+  return (
+      <FrontPage/>
+  )
 }
 
 export default App;
