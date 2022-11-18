@@ -1,42 +1,63 @@
 import React from 'react';
 import Header from "./Header";
+import SlideShow from "./SlideShow";
+
+import slide1 from "../Art/criocabin-lada-enixe-regal-eride.jpg";
+import slide2 from "../Art/drzwi-bezramowe-gran-vista.jpg";
+import slide3 from "../Art/lada-chlodnicza-ebonyony-z-produktami-garmazeryjnymi.jpg";
+import slide4 from "../Art/lada-chlodnicza-enixe-na-swieze-mieso.jpg";
+import slide5 from "../Art/lady-chlodnicze-z-miesem-enixe-elisir.jpg";
+
+
+const slides = [{
+    url: slide1,
+    title: "beach"
+}, {
+    url: slide2,
+    title: "boat"
+}, {
+    url: slide3,
+    title: "forest"
+}, {
+    url: slide4,
+    title: "city"
+}, {url: slide5, title: "italy"},];
+
+const containerStyles = {
+    width: "500px", height: "280px", margin: "0 auto",
+};
+
 
 function FrontPage(props) {
-    return (
-        <section id={'topSection'} className={'page'}>
-            <Header/>
-            <div className={'landing'}>
-                <div className={'landingContent'}>
-                    <div className={'landingLeftSide'}>
-                        ok
+    return (<section id={'topSection'} className={'page'}>
+        <Header/>
+        <div className={'landing'}>
+            <div className={'landingContent'}>
+                <div className={'landingLeftSide'}>
+                    <SlideShow slides={slides}/>
+                </div>
+                <div className={'landingRightSide'}>
+                    <div className={'list'}>
+                        <h1 className={'headline'}>Wyposażenie sklepów</h1>
+                        <h3 className={'link listElement active2'}>lady chłodnicze</h3>
+                        <h3 className={'link listElement active2'}>regały chłodnicze</h3>
+                        <h3 className={'link listElement active2'}>szafy chłodnicze</h3>
+                        <h3 className={'link listElement active2'}>szafy do sezonowania</h3>
+                        <h3 className={'link listElement active2'}>komory chłodnicze</h3>
                     </div>
-                    <div className={'landingRightSide'}>
-                        <div>
-                            What is Lorem Ipsum?
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
-
-                            Why do we use it?
-                            It is a long established fact that a reader will be distracted by the readable content of a
-                            page when looking at its layout. The point of using Lorem Ipsum is that it has a
-                            more-or-less normal distribution of letters, as opposed to using 'Content here, content
-                            here', making it look like readable English. Many desktop publishing packages and web page
-                            editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will
-                            uncover many web sites still in their infancy. Various versions have evolved over the years,
-                            sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-                        </div>
+                    <div className={'list'}>
+                        <h1 className={'headline'}>wyposażenie magazynów</h1>
+                        <h3 className={'link listElement active2'}>regały paletowe</h3>
+                        <h3 className={'link listElement active2'}>regały półkowe</h3>
+                        <h3 className={'link listElement active2'}>antresole przemysłowe</h3>
+                        <h3 className={'link listElement active2'}>podesty magazynowe</h3>
+                        <h3 className={'link listElement active2'}>regały na opony</h3>
+                        <h3 className={'link listElement active2'}>regały wspornikowe</h3>
                     </div>
                 </div>
             </div>
-        </section>
-    );
+        </div>
+    </section>);
 }
 
 export default FrontPage;

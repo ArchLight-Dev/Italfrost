@@ -6,7 +6,6 @@ function Header(props) {
         <header className={'header'}>
             <img src={logo} alt={'logo'} className={'logo'}/>
             <div className={'subpages'}>
-                <h2 className={'link subpage active'}>Home</h2>
                 <h2 className={'link subpage active'}>Aktualności</h2>
                 <h2 className={'link subpage active'}>Wiedza</h2>
                 <h2 className={'link subpage active'}>O nas</h2>
